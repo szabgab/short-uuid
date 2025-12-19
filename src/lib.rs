@@ -154,11 +154,11 @@ type UuidError = uuid::Error;
 pub type Bytes = Vec<u8>;
 
 /// Shortened UUID
-#[derive(Clone, Debug, Eq, PartialEq)]
+#[derive(Clone, Debug, Eq, PartialEq, Hash)]
 pub struct ShortUuid(Bytes);
 
 /// Shortened UUID using custom alphabet
-#[derive(Clone, Debug, Eq, PartialEq)]
+#[derive(Clone, Debug, Eq, PartialEq, Hash)]
 pub struct ShortUuidCustom(Bytes);
 
 /// Custom alphabet used for short uuid
